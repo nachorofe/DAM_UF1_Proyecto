@@ -11,7 +11,8 @@ Los requerimientos principales de diseño son los siguientes:
 - La interacción entre vistas y código se realizará, preferentemente, mediante View Binding. 
 - La aplicación tendrá soporte multilingüe. 
 - Se usarán barras de navegación y menús, así como diferentes elementos del sistema (radio buttons, snackbar, etc.)
-- Se valorará la gestión de base de datos. 
+- Se valorará la gestión de base de datos.
+- Se valorará el uso de Compose 
 
 ## Cómo trabajar
 

@@ -12,6 +12,8 @@ import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.travellogv2.database.ViajeDatabase
+import com.example.travellogv2.database.dao.ViajePendiente
 import kotlinx.coroutines.launch
 
 class ViajesPendientesFragment : Fragment() {

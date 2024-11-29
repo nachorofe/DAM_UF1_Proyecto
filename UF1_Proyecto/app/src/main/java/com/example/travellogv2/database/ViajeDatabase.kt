@@ -1,9 +1,12 @@
-package com.example.travellogv2
+package com.example.travellogv2.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.travellogv2.database.entity.Viaje
+import com.example.travellogv2.database.dao.ViajeDao
+import com.example.travellogv2.database.dao.ViajePendiente
 
 @Database(entities = [Viaje::class, ViajePendiente::class], version = 2, exportSchema = false)
 abstract class ViajeDatabase : RoomDatabase() {

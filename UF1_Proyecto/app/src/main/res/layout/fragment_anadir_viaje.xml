@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Añadir viaje"
+            android:text="@string/tvAnadirViaje"
             android:textSize="30dp"
             android:gravity="center"
             android:paddingBottom="16dp" />
@@ -23,7 +23,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lugar"
+            android:text="@string/tvLugar"
             android:textSize="18sp"
             android:layout_marginBottom="8dp" />
 
@@ -31,14 +31,14 @@
             android:id="@+id/etLugar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Introduce el lugar"
+            android:hint="@string/hintLugar"
             android:inputType="text" />
 
         <!-- Campo para la descripción -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Descripción"
+            android:text="@string/tvDescripcion"
             android:textSize="18sp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp" />
@@ -47,7 +47,7 @@
             android:id="@+id/etDescripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Introduce una descripción"
+            android:hint="@string/hintDescripcion"
             android:inputType="textMultiLine"
             android:minLines="3" />
 
@@ -55,7 +55,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Fotos"
+            android:text="@string/tvFoto"
             android:textSize="18sp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp" />
@@ -64,18 +64,17 @@
             android:id="@+id/btnFoto1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Añadir Foto" />
-
-
+            android:backgroundTint="#166196"
+            android:text="@string/btnAnadirFoto" />
 
         <!-- Botón para guardar -->
         <Button
             android:id="@+id/btnGuardar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Guardar viaje"
+            android:text="@string/btnGuardarViaje"
             android:layout_marginTop="16dp"
-            android:backgroundTint="@color/black"
+            android:backgroundTint="#164196"
             android:textColor="@android:color/white" />
 
         <View

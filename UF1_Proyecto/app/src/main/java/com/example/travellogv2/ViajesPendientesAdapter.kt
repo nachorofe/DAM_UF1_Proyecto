@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.travellogv2.database.dao.ViajePendiente
 
 class ViajesPendientesAdapter(
     private var viajes: List<ViajePendiente>,

@@ -1,4 +1,4 @@
-package com.example.travellogv2
+package com.example.travellogv2.database.dao
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

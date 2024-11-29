@@ -1,10 +1,11 @@
-package com.example.travellogv2
+package com.example.travellogv2.database.dao
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.example.travellogv2.database.entity.Viaje
 
 @Dao
 interface ViajeDao {

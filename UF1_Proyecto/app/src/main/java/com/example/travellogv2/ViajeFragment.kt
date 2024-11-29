@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.lifecycle.lifecycleScope
+import com.example.travellogv2.database.ViajeDatabase
 import kotlinx.coroutines.launch
 
 class ViajeFragment : Fragment() {

@@ -1,7 +1,14 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-android:background="@drawable/fondohome">
+    android:orientation="vertical"
+    android:background="@drawable/fondohome"
+android:gravity="center"
+>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
 
 <TextView
     android:id="@+id/textViewViaja"
@@ -9,14 +16,15 @@ android:background="@drawable/fondohome">
     android:layout_height="wrap_content"
     android:text="@string/viaja"
     android:textColor="#ffde59"
-    android:textSize="35sp"
+    android:textSize="25sp"
     android:visibility="gone"
     android:layout_centerHorizontal="true"
-    android:layout_marginTop="100dp"
+    android:layout_marginTop="5dp"
     android:shadowColor="#000000"
     android:shadowDx="3"
     android:shadowDy="3"
-    android:shadowRadius="5"/>
+    android:shadowRadius="5"
+    android:lineSpacingExtra="2sp"/>
 
 <TextView
     android:id="@+id/textViewSuena"
@@ -24,15 +32,16 @@ android:background="@drawable/fondohome">
     android:layout_height="wrap_content"
     android:text="@string/suena"
     android:textColor="#ffde59"
-    android:textSize="35sp"
+    android:textSize="25sp"
     android:visibility="gone"
     android:layout_below="@id/textViewViaja"
     android:layout_centerHorizontal="true"
-    android:layout_marginTop="20dp"
+    android:layout_marginTop="5dp"
     android:shadowColor="#000000"
     android:shadowDx="3"
     android:shadowDy="3"
-    android:shadowRadius="5"/>
+    android:shadowRadius="5"
+    android:lineSpacingExtra="2sp"/>
 
 <TextView
     android:id="@+id/textViewDisfruta"
@@ -40,42 +49,45 @@ android:background="@drawable/fondohome">
     android:layout_height="wrap_content"
     android:text="@string/disfruta"
     android:textColor="#ffde59"
-    android:textSize="35sp"
+    android:textSize="25sp"
     android:visibility="gone"
     android:layout_below="@id/textViewSuena"
     android:layout_centerHorizontal="true"
-    android:layout_marginTop="20dp"
+    android:layout_marginTop="5dp"
     android:shadowColor="#000000"
     android:shadowDx="3"
     android:shadowDy="3"
-    android:shadowRadius="5"/>
+    android:shadowRadius="5"
+    android:lineSpacingExtra="2sp"/>
 
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/travelloglogo"
+        android:layout_below="@id/textViewExperiencias"
+        android:layout_gravity="center"/>
 <TextView
     android:id="@+id/textViewExperiencias"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="@string/experiencias"
-    android:textSize="30sp"
-    android:gravity="center_horizontal"
-    android:visibility="gone"
+    android:textSize="20sp"
+    android:gravity="center_horizontal|bottom"
     android:layout_below="@id/textViewDisfruta"
     android:layout_centerHorizontal="true"
-    android:layout_marginTop="40dp"
-    android:shadowColor="#000000"
-    android:shadowDx="3"
-    android:shadowDy="3"
-    android:shadowRadius="5"/>
+    android:layout_marginTop="20dp"
+    android:textColor="#164196"
+    android:shadowColor="#ffffff"
+    android:shadowDx="0"
+    android:shadowDy="0"
+    android:shadowRadius="40"/>
 
-<ImageView
-    android:id="@+id/logoImage"
-    android:layout_width="350dp"
-    android:layout_height="350dp"
-    android:src="@drawable/travelloglogo"
-    android:layout_centerHorizontal="true"
-    android:layout_below="@id/textViewExperiencias"
-    android:layout_marginTop="40dp" />
+<View
+    android:layout_width="wrap_content"
+    android:layout_height="100dp" />
 
-</RelativeLayout>
+</LinearLayout>
 
 
 

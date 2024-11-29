@@ -32,7 +32,7 @@ class AnadirViajeFragment : Fragment() {
 
             // Actualiza el botón de foto con la nueva información
             val btnFoto = view?.findViewById<Button>(R.id.btnFoto1)
-            btnFoto?.text = "Foto añadida. Pulsa para cambiar"
+            btnFoto?.text = getString(R.string.foto_anadida)
 
             // Aplica colores personalizados al botón
             try {
@@ -44,13 +44,13 @@ class AnadirViajeFragment : Fragment() {
                 btnFoto?.setTextColor(Color.BLACK) // Color predeterminado
             }
 
-            Toast.makeText(requireContext(), "Foto seleccionada: $fotoUri", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(requireContext(), "Foto seleccionada: $fotoUri", Toast.LENGTH_SHORT).show()
             Log.d("AnadirViajeFragment", "Foto seleccionada: $fotoUri")
         }
     }
 
     companion object {
-        private const val PICK_IMAGE_REQUEST = 1
+        // Dejamos el método creado por si nos hace falta en el futuro
     }
 
     override fun onCreateView(
@@ -106,7 +106,7 @@ class AnadirViajeFragment : Fragment() {
                 }
             }
 
-            Log.d("AnadirViajeFragment", "Foto guardada internamente en: ${file.absolutePath}")
+//            Log.d("AnadirViajeFragment", "Foto guardada internamente en: ${file.absolutePath}")
             return file.absolutePath
         } catch (e: Exception) {
             Log.e("AnadirViajeFragment", "Error al guardar la foto: ${e.message}")
@@ -119,26 +119,26 @@ class AnadirViajeFragment : Fragment() {
         lifecycleScope.launch {
             database.viajeDao().insertarViaje(viaje)
             Toast.makeText(requireContext(), "Viaje guardado correctamente", Toast.LENGTH_SHORT).show()
-            mostrarUltimoViaje()
+/*            mostrarUltimoViaje() */
         }
     }
 
-    private fun mostrarUltimoViaje() {
-        lifecycleScope.launch {
-            val viajes = database.viajeDao().obtenerTodosLosViajes()
-            if (viajes.isNotEmpty()) {
-                val ultimoViaje = viajes.last()
-                Log.d("UltimoViaje", "Lugar: ${ultimoViaje.lugar}, Descripción: ${ultimoViaje.descripcion}, Foto: ${ultimoViaje.foto}")
-                Toast.makeText(
-                    requireContext(),
-                    "Último viaje - Lugar: ${ultimoViaje.lugar}, Descripción: ${ultimoViaje.descripcion}",
-                    Toast.LENGTH_LONG
-                ).show()
-            } else {
-                Log.d("UltimoViaje", "No se encontraron viajes en la base de datos.")
-            }
-        }
-    }
+//    private fun mostrarUltimoViaje() {
+//        lifecycleScope.launch {
+//            val viajes = database.viajeDao().obtenerTodosLosViajes()
+//            if (viajes.isNotEmpty()) {
+//                val ultimoViaje = viajes.last()
+//                Log.d("UltimoViaje", "Lugar: ${ultimoViaje.lugar}, Descripción: ${ultimoViaje.descripcion}, Foto: ${ultimoViaje.foto}")
+//                Toast.makeText(
+//                    requireContext(),
+//                    "Último viaje - Lugar: ${ultimoViaje.lugar}, Descripción: ${ultimoViaje.descripcion}",
+//                    Toast.LENGTH_LONG
+//                ).show()
+//            } else {
+//                Log.d("UltimoViaje", "No se encontraron viajes en la base de datos.")
+//            }
+//        }
+//    }
 }
 
 

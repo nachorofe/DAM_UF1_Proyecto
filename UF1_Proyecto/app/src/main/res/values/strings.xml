@@ -16,6 +16,7 @@
     <string name="tvFoto">Foto</string>
     <string name="btnAnadirFoto">Añadir foto</string>
     <string name="btnGuardarViaje">Guardar viaje</string>
+    <string name="foto_anadida">Foto añadida. Pulsa para cambiar</string>
 
     <!-- fragment_viajes_pendientes strings -->
     <string name="hintIntroduceLugarViajesPendientes">Introduce un lugar</string>
@@ -27,4 +28,5 @@
     <string name="menuVerViajes">Ver viajes</string>
     <string name="menuAnadirViaje">Añadir viaje</string>
     <string name="menuViajesPendientes">Pendientes</string>
+    <string name="foto_del_viaje">Foto del viaje</string>
 </resources>

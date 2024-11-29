@@ -2,22 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+<!-- Cambiado en showAsAction "always" por ifRoom" ya que de esta manera, en pantallas estrechas se vería de forma vertical (sin verse cortado) -->
 <item
     android:id="@+id/viajesFragment"
     android:icon="@android:drawable/ic_menu_agenda"
     android:title="@string/menuVerViajes"
-    app:showAsAction="always" />
+    app:showAsAction="ifRoom" />
 
 <item
     android:id="@+id/anadirViajeFragment"
     android:icon="@android:drawable/arrow_down_float"
     android:title="@string/menuAnadirViaje"
-    app:showAsAction="always" />
+    app:showAsAction="ifRoom" />
 
 <item
     android:id="@+id/viajesPendientesFragment"
     android:icon="@android:drawable/arrow_up_float"
     android:title="@string/menuViajesPendientes"
-    app:showAsAction="always" />
+    app:showAsAction="ifRoom" />
 
 </menu>

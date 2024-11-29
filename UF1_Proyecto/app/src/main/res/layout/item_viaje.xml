@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:gravity="center_vertical">
+
+    <!-- Imagen del viaje a la izquierda -->
+    <ImageView
+        android:id="@+id/ivViaje"
+        android:layout_width="150dp"
+        android:layout_height="96dp"
+        android:layout_marginEnd="6dp"
+        android:contentDescription="Foto del viaje"
+        android:src="@drawable/foto1" />
+
+    <!-- Texto del viaje a la derecha -->
+    <TextView
+        android:id="@+id/tvViaje"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Nombre del viaje"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical" />
+</LinearLayout>
+
+

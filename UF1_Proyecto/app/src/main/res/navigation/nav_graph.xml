@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.travellogv2.HomeFragment"
+        android:label="HomeFragment" />
+
+    <fragment
+        android:id="@+id/viajesFragment"
+        android:name="com.example.travellogv2.ViajesFragment"
+        android:label="ViajesFragment">
+
+        <!-- Acción que lleva al ViajeFragment -->
+        <action
+            android:id="@+id/action_viajesFragment_to_viajeFragment"
+            app:destination="@id/viajeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/anadirViajeFragment"
+        android:name="com.example.travellogv2.AnadirViajeFragment"
+        android:label="AnadirViajeFragment" />
+
+    <fragment
+        android:id="@+id/viajesPendientesFragment"
+        android:name="com.example.travellogv2.ViajesPendientesFragment"
+        android:label="ViajesPendientesFragment" />
+
+    <fragment
+        android:id="@+id/viajeFragment"
+        android:name="com.example.travellogv2.ViajeFragment"
+        android:label="ViajeFragment">
+
+        <!-- Argumento para pasar el ID del viaje -->
+        <argument
+            android:name="viajeId"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<item
+    android:id="@+id/viajesFragment"
+    android:icon="@android:drawable/ic_menu_agenda"
+    android:title="@string/menuVerViajes"
+    app:showAsAction="always" />
+
+<item
+    android:id="@+id/anadirViajeFragment"
+    android:icon="@android:drawable/arrow_down_float"
+    android:title="@string/menuAnadirViaje"
+    app:showAsAction="always" />
+
+<item
+    android:id="@+id/viajesPendientesFragment"
+    android:icon="@android:drawable/arrow_up_float"
+    android:title="@string/menuViajesPendientes"
+    app:showAsAction="always" />
+
+</menu>

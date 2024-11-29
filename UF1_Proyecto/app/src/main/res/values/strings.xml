@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">UF1_Proyecto</string>
+    <string name="app_name">TravelLogv2</string>
+
+    <!-- fragment_home strings -->
+    <string name="viaja">Viaja</string>
+    <string name="suena">Sueña</string>
+    <string name="disfruta">Disfruta</string>
+    <string name="experiencias">¡Y guarda todas tus experiencias en TravelLog!</string>
+
+    <!-- fragment_anadir_viaje strings -->
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menuVerViajes">Ver viajes</string>
+    <string name="menuAnadirViaje">Añadir viaje</string>
+    <string name="menuViajesPendientes">Pendientes</string>
 </resources>

@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/fondohome">
+
+<TextView
+    android:id="@+id/textViewViaja"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/viaja"
+    android:textColor="#ffde59"
+    android:textSize="35sp"
+    android:visibility="gone"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="100dp"
+    android:shadowColor="#000000"
+    android:shadowDx="3"
+    android:shadowDy="3"
+    android:shadowRadius="5"/>
+
+<TextView
+    android:id="@+id/textViewSuena"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/suena"
+    android:textColor="#ffde59"
+    android:textSize="35sp"
+    android:visibility="gone"
+    android:layout_below="@id/textViewViaja"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="20dp"
+    android:shadowColor="#000000"
+    android:shadowDx="3"
+    android:shadowDy="3"
+    android:shadowRadius="5"/>
+
+<TextView
+    android:id="@+id/textViewDisfruta"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/disfruta"
+    android:textColor="#ffde59"
+    android:textSize="35sp"
+    android:visibility="gone"
+    android:layout_below="@id/textViewSuena"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="20dp"
+    android:shadowColor="#000000"
+    android:shadowDx="3"
+    android:shadowDy="3"
+    android:shadowRadius="5"/>
+
+<TextView
+    android:id="@+id/textViewExperiencias"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/experiencias"
+    android:textSize="30sp"
+    android:gravity="center_horizontal"
+    android:visibility="gone"
+    android:layout_below="@id/textViewDisfruta"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="40dp"
+    android:shadowColor="#000000"
+    android:shadowDx="3"
+    android:shadowDy="3"
+    android:shadowRadius="5"/>
+
+<ImageView
+    android:id="@+id/logoImage"
+    android:layout_width="350dp"
+    android:layout_height="350dp"
+    android:src="@drawable/travelloglogo"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@id/textViewExperiencias"
+    android:layout_marginTop="40dp" />
+
+</RelativeLayout>
+
+
+

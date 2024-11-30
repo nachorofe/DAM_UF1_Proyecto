@@ -14,8 +14,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Viajes pendientes"
-            android:textSize="30dp"/>
+            android:text="@string/viajes_pendientes"
+            android:textSize="30sp"/>
 
         <!-- Campo para añadir un nuevo viaje pendiente -->
         <LinearLayout
@@ -29,14 +29,16 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:autofillHints="location"
                 android:hint="@string/hintIntroduceLugarViajesPendientes"
-                android:inputType="text" />
+                android:inputType="text"
+                android:padding="16dp"/>
 
             <Button
                 android:id="@+id/btnAgregarViajePendiente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Añadir" />
+                android:text="@string/btnAnadir" />
         </LinearLayout>
 
         <!-- Lista de viajes pendientes -->
@@ -50,51 +52,6 @@
         <View
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minHeight="90dp"/>
+            android:minHeight="100dp"/>
     </LinearLayout>
 </ScrollView>
-
-
-    <!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<LinearLayout-->
-<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    android:orientation="vertical"-->
-<!--    android:padding="4dp">-->
-
-<!--    &lt;!&ndash; Campo para añadir un nuevo viaje pendiente &ndash;&gt;-->
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="horizontal"-->
-<!--        android:paddingBottom="4dp">-->
-
-<!--        <EditText-->
-<!--            android:id="@+id/etNuevoViajePendiente"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:hint="Introduce un lugar"-->
-<!--            android:inputType="text" />-->
-
-<!--        <Button-->
-<!--            android:id="@+id/btnAgregarViajePendiente"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Añadir" />-->
-<!--    </LinearLayout>-->
-
-<!--    &lt;!&ndash; Lista de viajes pendientes &ndash;&gt;-->
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:id="@+id/rvViajesPendientes"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:scrollbars="vertical" />-->
-
-<!--    &lt;!&ndash; Espacio para que no se tape el contenido por el menú inferior &ndash;&gt;-->
-<!--    <View-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:minHeight="200dp"/>-->
-<!--</LinearLayout>-->

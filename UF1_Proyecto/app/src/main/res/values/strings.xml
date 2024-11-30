@@ -22,11 +22,12 @@
     <string name="hintIntroduceLugarViajesPendientes">Introduce un lugar</string>
     <string name="btnAnadir">Añadir</string>
 
-
     <!-- menu strings -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="menuVerViajes">Ver viajes</string>
     <string name="menuAnadirViaje">Añadir viaje</string>
     <string name="menuViajesPendientes">Pendientes</string>
     <string name="foto_del_viaje">Foto del viaje</string>
+    <string name="viajes_pendientes">Viajes pendientes</string>
+    <string name="eliminar_viaje">Eliminar viaje</string>
 </resources>

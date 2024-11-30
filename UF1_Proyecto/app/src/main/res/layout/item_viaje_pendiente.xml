@@ -5,16 +5,20 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:padding="8dp"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="@drawable/rounded_background"
+    android:layout_marginBottom="6dp"
+    >
 
     <!-- TextView que muestra el nombre del viaje pendiente -->
     <TextView
         android:id="@+id/tvViajePendiente"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        />
 
     <!-- Botón para eliminar viaje pendiente -->
     <Button

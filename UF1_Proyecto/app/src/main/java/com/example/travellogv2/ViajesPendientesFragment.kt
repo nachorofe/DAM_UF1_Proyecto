@@ -13,8 +13,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.travellogv2.database.ViajeDatabase
-import com.example.travellogv2.database.dao.ViajePendiente
+import com.example.travellogv2.database.entity.ViajePendiente
 import kotlinx.coroutines.launch
+import java.util.Locale
 
 class ViajesPendientesFragment : Fragment() {
 
@@ -69,11 +70,34 @@ class ViajesPendientesFragment : Fragment() {
 
     private fun agregarViajePendiente(viaje: String) {
         lifecycleScope.launch {
-            database.viajeDao().insertarViajePendiente(ViajePendiente(viaje = viaje))
-            Toast.makeText(requireContext(), "Viaje añadido", Toast.LENGTH_SHORT).show()
-            cargarViajesPendientes() // Actualizar la lista
+            // Convertir el nombre del viaje a minúsculas para hacer la comparación insensible al caso
+            val viajeEnMinusculas = viaje.trim().lowercase(Locale.getDefault()) // Convertir a minúsculas
+
+            // Comprobar si ya existe un viaje pendiente con el mismo nombre (sin distinguir mayúsculas/minúsculas)
+            val viajeExistente = database.viajeDao().obtenerViajePendientePorNombre(viajeEnMinusculas)
+
+            if (viajeExistente != null) {
+                // Si existe, mostrar mensaje sin hacer ninguna modificación
+                Toast.makeText(requireContext(), "Este viaje pendiente ya está en la lista", Toast.LENGTH_SHORT).show()
+            } else {
+                // Si no existe, añadimos un nuevo viaje pendiente (lo insertamos en minúsculas)
+                database.viajeDao().insertarViajePendiente(ViajePendiente(viaje = viajeEnMinusculas))
+                Toast.makeText(requireContext(), "Viaje pendiente añadido", Toast.LENGTH_SHORT).show()
+            }
+
+            // Actualizar la lista de viajes pendientes
+            cargarViajesPendientes()
         }
     }
+
+
+//    private fun agregarViajePendiente(viaje: String) {
+//        lifecycleScope.launch {
+//            database.viajeDao().insertarViajePendiente(ViajePendiente(viaje = viaje))
+//            Toast.makeText(requireContext(), "Viaje añadido", Toast.LENGTH_SHORT).show()
+//            cargarViajesPendientes() // Actualizar la lista
+//        }
+//    }
 
     private fun mostrarConfirmacionEliminar(viajeId: Int) {
         AlertDialog.Builder(requireContext())
@@ -88,7 +112,7 @@ class ViajesPendientesFragment : Fragment() {
     private fun eliminarViajePendiente(viajeId: Int) {
         lifecycleScope.launch {
             database.viajeDao().eliminarViajePendientePorId(viajeId)
-            Toast.makeText(requireContext(), "Viaje eliminado", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "Viaje pendiente eliminado", Toast.LENGTH_SHORT).show()
             cargarViajesPendientes() // Actualizar la lista después de eliminar
         }
     }

@@ -7,6 +7,9 @@
     <string name="disfruta">Disfruta</string>
     <string name="experiencias">¡Y guarda todas tus experiencias en TravelLog!</string>
 
+    <!-- fragment_viajes strings -->
+    <string name="tvViajes">Mis viajes</string>
+
     <!-- fragment_anadir_viaje strings -->
     <string name="tvAnadirViaje">Añadir Viaje</string>
     <string name="tvLugar">Lugar</string>
@@ -19,8 +22,12 @@
     <string name="foto_anadida">Foto añadida. Pulsa para cambiar</string>
 
     <!-- fragment_viajes_pendientes strings -->
+    <string name="tvViajesPendientes">Viajes pendientes</string>
     <string name="hintIntroduceLugarViajesPendientes">Introduce un lugar</string>
     <string name="btnAnadir">Añadir</string>
+
+    <!-- fragment_anadir_viaje strings -->
+    <string name="btnEliminarViaje">Eliminar viaje</string>
 
     <!-- menu strings -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

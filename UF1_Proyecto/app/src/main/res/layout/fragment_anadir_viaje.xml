@@ -3,21 +3,38 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="6dp"
+    android:background="@drawable/fondohome">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginBottom="10dp"/>
 
         <!-- Título -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/tvAnadirViaje"
-            android:textSize="30dp"
+            android:textSize="30sp"
+            android:textColor="#ffffff"
             android:gravity="center"
-            android:paddingBottom="16dp" />
+            android:padding="16dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/fondo_titulos"/>
+
+
+        <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_background">
 
         <!-- Campo para el lugar -->
         <TextView
@@ -31,6 +48,7 @@
             android:id="@+id/etLugar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints="place"
             android:hint="@string/hintLugar"
             android:inputType="text" />
 
@@ -76,6 +94,8 @@
             android:layout_marginTop="16dp"
             android:backgroundTint="#164196"
             android:textColor="@android:color/white" />
+
+</LinearLayout>
 
         <View
             android:layout_width="wrap_content"

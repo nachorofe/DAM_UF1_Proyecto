@@ -1,13 +1,16 @@
 package com.example.travellogv2
 
+import android.animation.ObjectAnimator
 import android.os.Bundle
-import android.view.LayoutInflater
+import android.os.Handler
+import android.os.Looper
+
 import android.view.View
-import android.view.ViewGroup
+
 import android.view.animation.Animation
-import android.view.animation.LinearInterpolator
+
 import android.view.animation.TranslateAnimation
-import android.widget.ImageView
+
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 
@@ -51,10 +54,40 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         // Iniciar las animaciones
         textViewViaja.startAnimation(translateAnimationFromLeft)
-        Thread.sleep(2500)
+//        Thread.sleep(2500)
         textViewSuena.startAnimation(translateAnimationFromRight)
-        Thread.sleep(2500)
+//        Thread.sleep(2500)
         textViewDisfruta.startAnimation(translateAnimationFromLeft)
+
+        // Retrasamos 2 segundos para que aparezca la frase final del eslogan
+        val textViewExperiencias = view.findViewById<TextView>(R.id.textViewExperiencias)
+
+        val textoCompleto = getString(R.string.experiencias)
+
+        textViewExperiencias.text = ""  // Inicialmente vacío
+        textViewExperiencias.alpha = 0f  // Inicia invisible
+
+// Fade-in para el TextView
+        val fadeIn = ObjectAnimator.ofFloat(textViewExperiencias, "alpha", 0f, 1f)
+        fadeIn.duration = 2000 // Duración de 2 segundos
+
+        val handler = Handler(Looper.getMainLooper())
+        val delay = 100L  // Tiempo entre letras (100ms)
+
+        var index = 0
+        handler.postDelayed(object : Runnable {
+            override fun run() {
+                if (index < textoCompleto.length) {
+                    textViewExperiencias.append(textoCompleto[index].toString())  // Agregar una letra a la vez
+                    index++
+                    handler.postDelayed(this, delay)
+                }
+            }
+        }, 1500)  // Espera segundo y medio antes de empezar a mostrar las letras
+
+// Inicia la animación de fade-in
+        fadeIn.start()
+
     }
 }
 

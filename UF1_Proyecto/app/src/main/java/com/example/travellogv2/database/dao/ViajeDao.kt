@@ -6,6 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.travellogv2.database.entity.Viaje
+import com.example.travellogv2.database.entity.ViajePendiente
 
 @Dao
 interface ViajeDao {
@@ -23,6 +24,10 @@ interface ViajeDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertarViajePendiente(viajePendiente: ViajePendiente)
 
+    // Consulta para buscar un viaje pendiente por nombre
+    @Query("SELECT * FROM viajes_pendientes WHERE LOWER(viaje) = :nombre")
+    suspend fun obtenerViajePendientePorNombre(nombre: String): ViajePendiente?
+
     @Query("SELECT * FROM viajes_pendientes")
     suspend fun obtenerViajesPendientes(): List<ViajePendiente>
 
@@ -32,5 +37,8 @@ interface ViajeDao {
     @Query("DELETE FROM viajes_pendientes WHERE id = :id")
     suspend fun eliminarViajePendientePorId(id: Int)
 
+    // Método para eliminar un viaje por id
+    @Query("DELETE FROM viaje WHERE id = :id")
+    suspend fun eliminarViaje(id: Int)
 
 }

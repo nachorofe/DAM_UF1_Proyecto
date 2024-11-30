@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.travellogv2.database.entity.Viaje
 import com.example.travellogv2.database.dao.ViajeDao
-import com.example.travellogv2.database.dao.ViajePendiente
+import com.example.travellogv2.database.entity.ViajePendiente
 
 @Database(entities = [Viaje::class, ViajePendiente::class], version = 2, exportSchema = false)
 abstract class ViajeDatabase : RoomDatabase() {

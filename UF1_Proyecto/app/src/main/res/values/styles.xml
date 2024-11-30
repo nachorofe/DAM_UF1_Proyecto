@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BottomNavTextStyle">
+        <item name="android:textSize">18sp</item>  <!-- Cambia 18sp por el tamaño que desees -->
+        <item name="android:textColor">@android:color/black</item>  <!-- Color del texto -->
+    </style>
+</resources>

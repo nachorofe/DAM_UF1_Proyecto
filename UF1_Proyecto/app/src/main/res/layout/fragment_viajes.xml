@@ -13,6 +13,22 @@
     android:orientation="vertical"
     android:padding="6dp">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tvViajes"
+        android:textSize="30sp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/fondo_titulos"/>
+
     <!-- importante asignar el id ya que lo necesitamos para asociarlo a ViajesFragment -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvViajes"

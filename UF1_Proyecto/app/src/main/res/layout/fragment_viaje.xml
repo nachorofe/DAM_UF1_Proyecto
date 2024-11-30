@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:background="@drawable/fondohome">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,23 +14,52 @@
         android:orientation="vertical"
         android:padding="6dp">
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginBottom="10dp"/>
+
         <TextView
             android:id="@+id/tvLugar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/fondo_titulos"/>
+
+
 
         <TextView
             android:id="@+id/tvDescripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:background="@drawable/rounded_background" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginBottom="6dp"/>
 
         <ImageView
             android:id="@+id/ivFoto"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             tools:ignore="ContentDescription" />
+
+        <Button
+            android:id="@+id/btnEliminarViaje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnEliminarViaje"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:drawableLeft="@drawable/iconopapelerablanco25"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center" />
 
         <View
             android:layout_width="wrap_content"

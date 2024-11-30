@@ -67,6 +67,7 @@ android:gravity="center"
         android:src="@drawable/travelloglogo"
         android:layout_below="@id/textViewExperiencias"
         android:layout_gravity="center"/>
+
 <TextView
     android:id="@+id/textViewExperiencias"
     android:layout_width="wrap_content"

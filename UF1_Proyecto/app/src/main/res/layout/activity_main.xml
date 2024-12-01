@@ -26,6 +26,4 @@
         app:itemIconTint="@null"
         app:itemTextAppearance="@style/Widget.MaterialComponents.Toolbar.Primary"/>
 
-
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

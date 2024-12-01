@@ -1,5 +1,11 @@
 <resources>
-    <string name="app_name">TravelLogv2</string>
+    <string name="app_name">TravelLog</string>
+
+    <!-- Generales -->
+    <string name="txtSi">Sí</string>
+    <string name="txtNo">No</string>
+    <string name="txtEliminar">Eliminar</string>
+    <string name="txtLogo">Logo de TravelLog</string>
 
     <!-- fragment_home strings -->
     <string name="viaja">Viaja</string>
@@ -28,6 +34,11 @@
 
     <!-- fragment_anadir_viaje strings -->
     <string name="btnEliminarViaje">Eliminar viaje</string>
+
+    <!-- ViajeFragment strings -->
+    <string name="txtViajeNoEncontrado">Viaje no encontrado</string>
+    <string name="txtViajeEliminado">Viaje eliminado</string>
+    <string name="txtConfirmacionEliminacion">¿Estás seguro/a de que deseas eliminar este viaje?</string>
 
     <!-- menu strings -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

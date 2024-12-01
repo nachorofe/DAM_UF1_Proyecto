@@ -1,15 +1,9 @@
 package com.example.travellogv2
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.google.android.material.appbar.MaterialToolbar
-import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.AppBarConfiguration
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -23,10 +17,10 @@ class MainActivity : AppCompatActivity() {
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
 
-        // Configurar destinos de nivel superior
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.homeFragment, R.id.viajesFragment, R.id.anadirViajeFragment, R.id.viajesPendientesFragment)
-        )
+        // Configurar destinos de nivel superior (me dice que appBarConfiguration no está siendo utilizada)
+//        val appBarConfiguration = AppBarConfiguration(
+//            setOf(R.id.homeFragment, R.id.viajesFragment, R.id.anadirViajeFragment, R.id.viajesPendientesFragment)
+//        )
 
         // Configurar el menú inferior con NavController
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)

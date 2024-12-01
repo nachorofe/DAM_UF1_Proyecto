@@ -25,7 +25,7 @@
         android:id="@+id/btnEliminarViajePendiente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Eliminar"
+        android:text="@string/txtEliminar"
         android:textAlignment="textEnd"
         android:textColor="@android:color/holo_red_dark"
         android:drawableLeft="@drawable/iconopapelera30"
@@ -33,33 +33,3 @@
         android:background="?android:attr/selectableItemBackground" />
 
 </LinearLayout>
-
-
-<!--    <?xml version="1.0" encoding="utf-8"?>-->
-<!--<LinearLayout-->
-<!--xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--android:layout_width="match_parent"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:orientation="horizontal"-->
-<!--android:padding="8dp"-->
-<!--android:weightSum="2">-->
-
-<!--<TextView-->
-<!--    android:id="@+id/tvViajePendiente"-->
-<!--    android:layout_width="0dp"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:layout_weight="1"-->
-<!--    android:text="Nombre del viaje pendiente"-->
-<!--    android:textSize="18sp"-->
-<!--    android:textStyle="bold" />-->
-
-<!--&lt;!&ndash; Botón para eliminar viaje pendiente &ndash;&gt;-->
-<!--<Button-->
-<!--    android:id="@+id/btnEliminarViajePendiente"-->
-<!--    android:layout_width="wrap_content"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:text="X"-->
-<!--    android:textColor="@android:color/holo_red_dark"-->
-<!--    android:background="?android:attr/selectableItemBackground" />-->
-<!--</LinearLayout>-->
-

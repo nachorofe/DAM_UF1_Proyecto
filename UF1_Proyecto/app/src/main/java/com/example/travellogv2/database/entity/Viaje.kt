@@ -11,4 +11,3 @@ data class Viaje(
     val descripcion: String,
     val foto: String
 )
-

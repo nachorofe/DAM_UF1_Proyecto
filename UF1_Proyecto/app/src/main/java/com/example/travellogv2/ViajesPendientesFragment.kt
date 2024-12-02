@@ -70,8 +70,8 @@ class ViajesPendientesFragment : Fragment() {
 
     private fun agregarViajePendiente(viaje: String) {
         lifecycleScope.launch {
-            // Convertir el nombre del viaje a minúsculas para hacer la comparación insensible al caso
-            val viajeEnMinusculas = viaje.trim().lowercase(Locale.getDefault()) // Convertir a minúsculas
+            // Convertir el nombre del viaje a minúsculas solo para la comparación insensible al caso
+            val viajeEnMinusculas = viaje.trim().lowercase(Locale.getDefault()) // Convertir a minúsculas para la comprobación
 
             // Comprobar si ya existe un viaje pendiente con el mismo nombre (sin distinguir mayúsculas/minúsculas)
             val viajeExistente = database.viajeDao().obtenerViajePendientePorNombre(viajeEnMinusculas)
@@ -80,8 +80,9 @@ class ViajesPendientesFragment : Fragment() {
                 // Si existe, mostrar mensaje sin hacer ninguna modificación
                 Toast.makeText(requireContext(), "Este viaje pendiente ya está en la lista", Toast.LENGTH_SHORT).show()
             } else {
-                // Si no existe, añadimos un nuevo viaje pendiente (lo insertamos en minúsculas)
-                database.viajeDao().insertarViajePendiente(ViajePendiente(viaje = viajeEnMinusculas))
+                // Si no existe, añadimos un nuevo viaje pendiente
+                // Insertamos el viaje tal y como lo introdujo el usuario (sin modificar mayúsculas/minúsculas)
+                database.viajeDao().insertarViajePendiente(ViajePendiente(viaje = viaje.trim())) // Se mantiene el formato original
                 Toast.makeText(requireContext(), "Viaje pendiente añadido", Toast.LENGTH_SHORT).show()
             }
 
@@ -89,15 +90,6 @@ class ViajesPendientesFragment : Fragment() {
             cargarViajesPendientes()
         }
     }
-
-
-//    private fun agregarViajePendiente(viaje: String) {
-//        lifecycleScope.launch {
-//            database.viajeDao().insertarViajePendiente(ViajePendiente(viaje = viaje))
-//            Toast.makeText(requireContext(), "Viaje añadido", Toast.LENGTH_SHORT).show()
-//            cargarViajesPendientes() // Actualizar la lista
-//        }
-//    }
 
     private fun mostrarConfirmacionEliminar(viajeId: Int) {
         AlertDialog.Builder(requireContext())

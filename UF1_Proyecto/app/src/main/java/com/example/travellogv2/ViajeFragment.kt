@@ -39,7 +39,6 @@ class ViajeFragment : Fragment() {
             // Mostrar la confirmación antes de eliminar el viaje
             mostrarConfirmacionEliminar()
         }
-
         return view
     }
 
@@ -82,6 +81,7 @@ class ViajeFragment : Fragment() {
     }
 
     private fun eliminarViaje() {
+        // lifecycleScope es una extensión de Jetpack que crea una corutina (asíncrona) para la tarea que envuelve, permitiendo que se siga ejecutando el fragmento y cancelándose automáticamente si la actividad es destruida
         lifecycleScope.launch {
             // Obtener la referencia de la base de datos
             val database = ViajeDatabase.getDatabase(requireContext())
@@ -103,7 +103,6 @@ class ViajeFragment : Fragment() {
 
                 // Mostrar mensaje y regresar a la pantalla anterior
                 Toast.makeText(requireContext(),getString(R.string.txtViajeEliminado), Toast.LENGTH_SHORT).show()
-//                requireActivity().onBackPressed() // Volver al fragment anterior
                 val navController = findNavController()
                 navController.popBackStack()
             }

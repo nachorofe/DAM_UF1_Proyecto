@@ -29,7 +29,7 @@ class ViajesAdapter(
 
         holder.tvViaje.text = viaje.lugar
 
-        // Si la foto está disponible, la cargamos
+        // Si la foto está disponible, la cargamos. En caso contrario, añadimos la foto por defecto
         if (viaje.foto.isNotEmpty()) {
             holder.ivViaje.setImageURI(Uri.parse(viaje.foto))
         } else {

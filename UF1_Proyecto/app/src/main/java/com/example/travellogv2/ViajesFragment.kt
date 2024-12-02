@@ -30,7 +30,7 @@ class ViajesFragment : Fragment() {
         val recyclerView: RecyclerView = view.findViewById(R.id.rvViajes)
         recyclerView.layoutManager = LinearLayoutManager(context)
 
-        // Configurar adaptador con callback para navegar
+        // Configurar adaptador para navegar, indicando la variable que se pasa mediante safeargs a ViajeFragment
         adapter = ViajesAdapter(emptyList()) { viajeId ->
             val action = ViajesFragmentDirections.actionViajesFragmentToViajeFragment(viajeId)
             findNavController().navigate(action)
@@ -39,7 +39,6 @@ class ViajesFragment : Fragment() {
 
         // Cargar datos de la base de datos
         cargarViajes()
-
         return view
     }
 
@@ -52,6 +51,3 @@ class ViajesFragment : Fragment() {
         }
     }
 }
-
-
-

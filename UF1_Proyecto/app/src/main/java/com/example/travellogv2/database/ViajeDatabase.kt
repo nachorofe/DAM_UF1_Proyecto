@@ -18,6 +18,7 @@ abstract class ViajeDatabase : RoomDatabase() { // Especificamos la bdd como Roo
 
     abstract fun viajeDao(): ViajeDao // Abstract ya que Room no puede implementar los métodos DAO por sí mismo
 
+    // Companion object se utiliza para declarar miembros estáticos
     companion object {
         @Volatile
         private var INSTANCE: ViajeDatabase? = null

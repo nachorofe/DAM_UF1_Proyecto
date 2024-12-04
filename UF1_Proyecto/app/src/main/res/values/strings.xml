@@ -26,6 +26,7 @@
     <string name="btnAnadirFoto">Añadir foto</string>
     <string name="btnGuardarViaje">Guardar viaje</string>
     <string name="foto_anadida">Foto añadida. Pulsa para cambiar</string>
+    <string name="validacion">Lugar y descripción son obligatorios</string>
 
     <!-- fragment_viajes_pendientes strings -->
     <string name="tvViajesPendientes">Viajes pendientes</string>

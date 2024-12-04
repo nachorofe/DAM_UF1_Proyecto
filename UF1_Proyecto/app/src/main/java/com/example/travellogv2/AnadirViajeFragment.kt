@@ -26,12 +26,13 @@ class AnadirViajeFragment : Fragment() {
     private lateinit var database: ViajeDatabase
     private var fotoUri: Uri? = null // Guardará la URI temporal de la foto
 
+    // Obtenemos la foto (registerForActivityResult viene a reemplazar a startActivityForResult y onActivityResult)
     private val pickImageLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
         uri?.let {
-            fotoUri = it // Guarda la URI de la imagen seleccionada
+            fotoUri = it // Guardamos la URI de la imagen seleccionada
 
-            // Actualiza el botón de foto con la nueva información
-            val btnFoto = view?.findViewById<Button>(R.id.btnFoto1)
+            // Actualizamos el botón de foto con la nueva información
+            val btnFoto = view?.findViewById<Button>(R.id.btnFoto)
             btnFoto?.text = getString(R.string.foto_anadida)
 
             // Aplica colores personalizados al botón
@@ -44,7 +45,6 @@ class AnadirViajeFragment : Fragment() {
                 btnFoto?.setTextColor(Color.BLACK) // Color predeterminado
             }
 
-//            Toast.makeText(requireContext(), "Foto seleccionada: $fotoUri", Toast.LENGTH_SHORT).show()
             Log.d("AnadirViajeFragment", "Foto seleccionada: $fotoUri")
         }
     }
@@ -59,7 +59,7 @@ class AnadirViajeFragment : Fragment() {
 
         val etLugar = view.findViewById<EditText>(R.id.etLugar)
         val etDescripcion = view.findViewById<EditText>(R.id.etDescripcion)
-        val btnFoto = view.findViewById<Button>(R.id.btnFoto1)
+        val btnFoto = view.findViewById<Button>(R.id.btnFoto)
         val btnGuardar = view.findViewById<Button>(R.id.btnGuardar)
 
         // Botón para seleccionar una foto de la galería
@@ -73,7 +73,7 @@ class AnadirViajeFragment : Fragment() {
             val descripcion = etDescripcion.text.toString().trim()
 
             if (lugar.isEmpty() || descripcion.isEmpty()) {
-                Toast.makeText(requireContext(), "Lugar y descripción son obligatorios", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), getString(R.string.validacion), Toast.LENGTH_SHORT).show()
             } else {
                 // Guardar el viaje, con la foto si está disponible
                 val rutaFoto = fotoUri?.let { guardarFotoInternamente(it) } ?: ""
